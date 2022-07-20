@@ -1,0 +1,59 @@
+﻿
+@model BookRegistration
+@{
+	ViewData["Title"] = "Check Out A Book";
+}
+
+<h2>Check Out Book</h2>
+
+<form method="post">
+	<div class="col-md-6">
+		<div class="form-group">
+			<label class="fw-bold control-label" asp-for="Title"></label>
+			<input class="form-control" asp-for="Title" />
+			<span class="text-danger" asp-validation-for="Title"></span>			
+		</div>
+	</div>		
+	
+	<div class="col-md-6">
+		<div class="form-group">
+			<label class="fw-bold control-label" asp-for="Author"></label>
+			<input class="form-control" asp-for="Author" />
+			<span class="text-danger" asp-validation-for="Author"></span>			
+		</div>
+	</div>
+	
+	<div class="col-md-6">
+		<div class="form-group">
+			<label class="fw-bold control-label" asp-for="ISBN"></label>
+			<input class="form-control" asp-for="ISBN" />
+			<span class="text-danger" asp-validation-for="ISBN"></span>			
+		</div>
+	</div>
+
+	<div class="col-md-6">
+		<div class="form-group">
+			<label class="fw-bold control-label" asp-for="Price"></label>
+			<input class="form-control" asp-for="Price" />
+			<span class="text-danger" asp-validation-for="Price"></span>
+		</div>
+	</div>
+	
+	<div class="col-md-6">
+		<div class="form-group">
+			<label class="fw-bold control-label" asp-for="FullName"></label>
+			<input class="form-control" asp-for="FullName" />
+			<span class="text-danger" asp-validation-for="FullName"></span>			
+		</div>
+	</div>
+	
+	<div class="col-md-6">
+		<div class="form-group">
+			<input class="btn btn-primary form-control" type="submit" value="Add Product" />		
+		</div>
+	</div>
+</form>
+
+@section Scripts{
+	<partial name="_ValidationScriptsPartial" />
+}
